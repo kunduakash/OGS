@@ -1,161 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Ubuntu"
+      rel="stylesheet"
+    />
     <title>Grocery Store</title>
-    <link rel="icon" type="image/png"
-            href="https://southeastasia1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=jpeg&cs=fFNQTw&docid=https%3A%2F%2Fviteduin59337-my.sharepoint.com%3A443%2F_api%2Fv2.0%2Fdrives%2Fb!-TkH7zP3u0qzVB9cQZpab9xSy5HTcYNGiPVAzVGJB7lAhPiWukEhTIP3NrJ--oMG%2Fitems%2F01TUWEME2CWUI2Q4OB6VC37TBHUAD5RVQT%3Fversion%3DPublished&access_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvdml0ZWR1aW41OTMzNy1teS5zaGFyZXBvaW50LmNvbUBjN2IwMGQ3Zi1hZDk5LTQ0MmEtYjEyZi1jMmM5MTIwNDRmZGMiLCJpc3MiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAiLCJuYmYiOiIxNjE4NDc3MjAwIiwiZXhwIjoiMTYxODQ5ODgwMCIsImVuZHBvaW50dXJsIjoiWWtyTEl2Zzg0bTlyVXhmazJSaE5MUC9aQVUzQURaNGNFZGtLRjEyT0dCUT0iLCJlbmRwb2ludHVybExlbmd0aCI6IjEyMyIsImlzbG9vcGJhY2siOiJUcnVlIiwidmVyIjoiaGFzaGVkcHJvb2Z0b2tlbiIsInNpdGVpZCI6IlpXWXdOek01WmprdFpqY3pNeTAwWVdKaUxXSXpOVFF0TVdZMVl6UXhPV0UxWVRabSIsInNpZ25pbl9zdGF0ZSI6IltcImttc2lcIl0iLCJuYW1laWQiOiIwIy5mfG1lbWJlcnNoaXB8eWFzaC5mYWxrZUB2aXQuZWR1LmluIiwibmlpIjoibWljcm9zb2Z0LnNoYXJlcG9pbnQiLCJpc3VzZXIiOiJ0cnVlIiwiY2FjaGVrZXkiOiIwaC5mfG1lbWJlcnNoaXB8MTAwMzIwMDA1ZGYwZjViMEBsaXZlLmNvbSIsInR0IjoiMCIsInVzZVBlcnNpc3RlbnRDb29raWUiOiIzIn0.VFJ2eWZ4cTlrOS9IdDZJQzE4Yjg0VzFHRzduT2xuVG9zNUdpYmxYRERpOD0&encodeFailures=1&width=1325&height=597&srcWidth=&srcHeight="/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css" integrity="sha512-OdEXQYCOldjqUEsuMKsZRj93Ht23QRlhIb8E/X0sbwZhme8eUw6g8q7AdxGJKakcBbv7+/PX0Gc2btf7Ru8cZA==" crossorigin="anonymous" />  
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://southeastasia1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=jpeg&cs=fFNQTw&docid=https%3A%2F%2Fviteduin59337-my.sharepoint.com%3A443%2F_api%2Fv2.0%2Fdrives%2Fb!-TkH7zP3u0qzVB9cQZpab9xSy5HTcYNGiPVAzVGJB7lAhPiWukEhTIP3NrJ--oMG%2Fitems%2F01TUWEME2CWUI2Q4OB6VC37TBHUAD5RVQT%3Fversion%3DPublished&access_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvdml0ZWR1aW41OTMzNy1teS5zaGFyZXBvaW50LmNvbUBjN2IwMGQ3Zi1hZDk5LTQ0MmEtYjEyZi1jMmM5MTIwNDRmZGMiLCJpc3MiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAiLCJuYmYiOiIxNjE4NDc3MjAwIiwiZXhwIjoiMTYxODQ5ODgwMCIsImVuZHBvaW50dXJsIjoiWWtyTEl2Zzg0bTlyVXhmazJSaE5MUC9aQVUzQURaNGNFZGtLRjEyT0dCUT0iLCJlbmRwb2ludHVybExlbmd0aCI6IjEyMyIsImlzbG9vcGJhY2siOiJUcnVlIiwidmVyIjoiaGFzaGVkcHJvb2Z0b2tlbiIsInNpdGVpZCI6IlpXWXdOek01WmprdFpqY3pNeTAwWVdKaUxXSXpOVFF0TVdZMVl6UXhPV0UxWVRabSIsInNpZ25pbl9zdGF0ZSI6IltcImttc2lcIl0iLCJuYW1laWQiOiIwIy5mfG1lbWJlcnNoaXB8eWFzaC5mYWxrZUB2aXQuZWR1LmluIiwibmlpIjoibWljcm9zb2Z0LnNoYXJlcG9pbnQiLCJpc3VzZXIiOiJ0cnVlIiwiY2FjaGVrZXkiOiIwaC5mfG1lbWJlcnNoaXB8MTAwMzIwMDA1ZGYwZjViMEBsaXZlLmNvbSIsInR0IjoiMCIsInVzZVBlcnNpc3RlbnRDb29raWUiOiIzIn0.VFJ2eWZ4cTlrOS9IdDZJQzE4Yjg0VzFHRzduT2xuVG9zNUdpYmxYRERpOD0&encodeFailures=1&width=1325&height=597&srcWidth=&srcHeight="
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css"
+      integrity="sha512-OdEXQYCOldjqUEsuMKsZRj93Ht23QRlhIb8E/X0sbwZhme8eUw6g8q7AdxGJKakcBbv7+/PX0Gc2btf7Ru8cZA=="
+      crossorigin="anonymous"
+    />
 
     <style>
-        body{
-            margin: 0;
-            padding: 0;
-            font-family: 'Ubuntu', sans-serif;
-        }
-        header{
-            overflow: hidden;
-            height: 100vh;
-        }
-        .img-bg{
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            min-height: 100%;
-            min-width: 100%;
-            filter: blur(2px);
-        }
-        .nav-area{
-            background: rgba(0, 0, 0, 0.3);
-            height: 60px;
-            position: absolute;
-            width: 100%
-        }
-        .logo{
-            font-family: Comic Sans MS;
-            margin: 0 50px;
-            height: 60px;
-            float: left;
-            color: white;
-            font-size: 40px;
-            text-transform: capitalize;
-            font-weight: bold;
-            letter-spacing:2px;
-        }
-        .menu-area{
-            float: right;
-            list-style: none;
-            margin: 20px;
-        }
-        .menu-area li{
-            display: inline-block;
-            margin: 0 5px;
-        }
-        .menu-area li a{
-            font-family: Comic Sans MS;
-            text-decoration: none;
-            color: white;
-            padding: 5px 10px;
-            letter-spacing: 2px;
-            font-size: 20px;
-        }
-        .menu-area li a:hover{
-            color: white;
-            height: 50px;
-            width: 75px;
-            background: linear-gradient(to right, #9C27B0, #E040FB);
-            border-radius: 40px;
-            box-shadow: 2px 6px 20px black;
-        }
-        .banner-text{
-            top: 43%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            position: absolute;
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Ubuntu", sans-serif;
+      }
+      header {
+        overflow: hidden;
+        height: 100vh;
+      }
+      .img-bg {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        min-height: 100%;
+        min-width: 100%;
+        filter: blur(2px);
+      }
+      .nav-area {
+        background: rgba(0, 0, 0, 0.3);
+        height: 60px;
+        position: absolute;
+        width: 100%;
+      }
+      .logo {
+        font-family: Comic Sans MS;
+        margin: 0 50px;
+        height: 60px;
+        float: left;
+        color: white;
+        font-size: 40px;
+        text-transform: capitalize;
+        font-weight: bold;
+        letter-spacing: 2px;
+      }
+      .menu-area {
+        float: right;
+        list-style: none;
+        margin: 20px;
+      }
+      .menu-area li {
+        display: inline-block;
+        margin: 0 5px;
+      }
+      .menu-area li a {
+        font-family: Comic Sans MS;
+        text-decoration: none;
+        color: white;
+        padding: 5px 10px;
+        letter-spacing: 2px;
+        font-size: 20px;
+      }
+      .menu-area li a:hover {
+        color: white;
+        height: 50px;
+        width: 75px;
+        background: linear-gradient(to right, #9c27b0, #e040fb);
+        border-radius: 40px;
+        box-shadow: 2px 6px 20px black;
+      }
+      .banner-text {
+        top: 43%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        position: absolute;
+      }
+      .banner-text h2 {
+        background: -webkit-linear-gradient(
+          rgb(55, 113, 224),
+          rgb(55, 113, 224)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 65px;
+        margin: 0;
+      }
+      .banner-text p {
+        background: -webkit-linear-gradient(#ec0d0d, #e70909);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 25px;
+        margin: 0;
+        font-weight: bold;
+      }
+      .btn {
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 5%;
+        background: transparent;
+        border: 0;
+        font-size: 20px;
+        text-transform: uppercase;
+        border: 3px solid #e040fb;
+        padding: 10px 25px;
+        border-radius: 25px;
+        text-shadow: 1px 1px 1px #000;
+      }
+      .btn:hover {
+        background: linear-gradient(to right, #9c27b0, #e040fb);
+        color: white;
+        border: none;
+        box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+      }
+      .social {
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        position: absolute;
+      }
+      .social a {
+        text-decoration: none;
+        padding: 20px;
+      }
+      .socialabibi-facebook: hover {
 
-
-        }
-        .banner-text h2{
-            background: -webkit-linear-gradient(rgb(55, 113, 224), rgb(55, 113, 224));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-size: 65px;
-            margin: 0;
-
-        }
-        .banner-text p{
-            background: -webkit-linear-gradient(#ec0d0d, #e70909);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-size: 25px;
-            margin: 0;
-            font-weight: bold;
-
-
-        }
-        .btn{
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 5%;
-            background: transparent;
-            border: 0;
-            font-size: 20px;
-            text-transform: uppercase;
-            border: 3px solid #E040FB;
-            padding: 10px 25px;
-            border-radius: 25px;
-            text-shadow: 1px 1px 1px #000
-        }
-        .btn:hover{
-            background: linear-gradient(to right, #9C27B0, #E040FB);
-            color: white;
-            border: none;
-            box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
-        }
-        .social{
-            top: 65%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            position: absolute;
-        }
-        .social a {
-            text-decoration: none;
-            padding: 20px;
-        }
-        .social a bi bi-facebook: hover{
-
-        }
+      }
     </style>
-</head>
-<body >
-<header>
-    <image src="/static/Images/food2.jpg" alt="background"
-           class="img-bg"></image>
+  </head>
+  <body>
+    <header>
+      <image
+        src="/static/Images/food2.jpg"
+        alt="background"
+        class="img-bg"
+      ></image>
 
-    <div class="nav-area">
+      <div class="nav-area">
         <div class="logo">Grocery Store</div>
         <ul class="menu-area">
-            {% if user.is_authenticated %}
-            <li style="color: white; font-family: Bradley Hand ITC; font-weight: bold;
-                font-size: 30px; ">
-                Hi, {{user.username}}</li>
-            <li><a href="/logout">Log out</a></li>
-            <li><a href="/products">Products</a></li>
-            {% else %}
-            <li><a href="/register">Sign up</a></li>
-            <li><a href="/login">Sign in</a></li>
-            {% endif %}
-            <li><a href="/about-us">About</a></li>
+          {% if user.is_authenticated %}
+          <li
+            style="
+              color: white;
+              font-family: Bradley Hand ITC;
+              font-weight: bold;
+              font-size: 30px;
+            "
+          >
+            Hi, {{user.username}}
+          </li>
+          <li><a href="/logout">Log out</a></li>
+          <li><a href="/products">Products</a></li>
+          {% else %}
+          <li><a href="/register">Sign up</a></li>
+          <li><a href="/login">Sign in</a></li>
+          {% endif %}
+          <li><a href="/about-us">About</a></li>
         </ul>
-    </div>
-    <div class="banner-text">
-        <h2>Online Grocery Store</h2><br>
+      </div>
+      <div class="banner-text">
+        <h2>Online Grocery Store</h2>
+        <br />
 
-        <p>We deliver all grocery products to your home </p>
-    </div>
-</header>
-</body>
+        <p>We deliver all grocery products to your home and happy shopping</p>
+      </div>
+    </header>
+  </body>
 </html>
